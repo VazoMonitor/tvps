@@ -12,8 +12,8 @@ server {
     listen 443 ssl;
     server_name vazo.info www.vazo.info api.vazo.info;
 
-    ssl_certificate /etc/letsencrypt/live/api.vazo.info/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/api.vazo.info/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/vazo.info/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/vazo.info/privkey.pem;
 
     # Localização dos arquivos do frontend React (ajuste para o diretório onde seu React está)
     root /root/FrontEnd;  
@@ -30,8 +30,8 @@ server {
     listen 443 ssl;
     server_name api.vazo.info;
 
-    ssl_certificate /etc/letsencrypt/live/api.vazo.info/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/api.vazo.info/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/vazo.info/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/vazo.info/privkey.pem;
 
     location / {
         proxy_pass http://127.0.0.1:8880;  # Redireciona as requisições da API para a porta 8880
